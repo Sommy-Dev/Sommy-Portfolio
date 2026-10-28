@@ -1189,14 +1189,31 @@ a:focus {
 /*******************************/
 .contact {
     position: relative;
+    overflow: hidden;
     width: 100%;
     margin: 45px 0;
     background: var(--accent);
 }
 
 .contact .container-fluid {
+    background: none;
+}
+
+#contact .container-fluid {
     background: url(../img/contact.jpg) left center no-repeat;
     background-size: contain;
+}
+
+/* Tools section: plain background, no image overlap */
+#tools .container-fluid {
+    background: none;
+}
+#tools .col-md-6 {
+    background: var(--bg);
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    z-index: 2;
 }
 
 .contact .contact-form {
