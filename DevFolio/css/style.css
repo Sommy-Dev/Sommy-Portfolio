@@ -1184,9 +1184,59 @@ a:focus {
 }
 
 
-/*******************************/
+/*********************************/
+/********* AI Section CSS ********/
+/*********************************/
+.ai-section {
+    background: var(--primary);
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.ai-section .section-header {
+    margin-bottom: 45px;
+}
+
+.ai-section .section-header p {
+    color: #ffffff;
+    background: transparent;
+    position: relative;
+}
+
+.ai-section .section-header p::before {
+    display: none;
+}
+
+.ai-section .section-header h2 {
+    color: #ffffff;
+}
+
+.ai-card {
+    background: var(--bg);
+    border-radius: 12px;
+    padding: 25px;
+    border-top: 4px solid var(--accent);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .05);
+    height: 100%;
+}
+
+.ai-card h3 {
+    color: var(--primary);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.ai-card p {
+    color: var(--dark);
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+
+/*********************************/
 /********* Contact CSS *********/
-/*******************************/
+/*********************************/
 .contact {
     position: relative;
     overflow: hidden;
