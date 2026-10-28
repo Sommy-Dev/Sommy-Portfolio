@@ -108,13 +108,14 @@
         $.ajax({
             url: 'https://portfolio-api-q6rc.onrender.com/api/contact',
             type: 'POST',
+            contentType: 'application/json',
             dataType: 'json',
-            data: {
+            data: JSON.stringify({
                 name: name,
                 email: email,
                 subject: subject,
                 message: message
-            },
+            }),
             success: function (response) {
                 if (response.ok === true) {
                     messageBox.html('<div class="alert success">Your message has been sent. I will get back to you soon!</div>').show();
@@ -123,8 +124,19 @@
                     messageBox.html('<div class="alert error">' + (response.error || 'Something went wrong.') + '</div>').show();
                 }
             },
-            error: function () {
-                messageBox.html('<div class="alert error">Something went wrong. Please try again.</div>').show();
+            error: function (xhr) {
+                var errorMsg = 'Something went wrong. Please try again.';
+                if (xhr.responseText) {
+                    try {
+                        var parsed = JSON.parse(xhr.responseText);
+                        if (parsed.error) {
+                            errorMsg = parsed.error;
+                        }
+                    } catch (e) {
+                        errorMsg = xhr.responseText;
+                    }
+                }
+                messageBox.html('<div class="alert error">' + errorMsg + '</div>').show();
             },
             complete: function () {
                 submitBtn.prop('disabled', false);
