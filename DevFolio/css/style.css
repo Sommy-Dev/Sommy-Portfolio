@@ -1510,6 +1510,18 @@ nav, .navbar, header {
   color: var(--accent) !important;
 }
 
+/* Sticky navbar link colors (dark on light bg with orange hover/active) */
+.navbar.nav-sticky .nav-link,
+.navbar.nav-sticky a {
+  color: #0F172A !important;
+}
+.navbar.nav-sticky .nav-link:hover,
+.navbar.nav-sticky .nav-link.active,
+.navbar.nav-sticky a:hover,
+.navbar.nav-sticky a.active {
+  color: #F97316 !important;
+}
+
 /* Hero / top section (replaces the orange) */
 .hero, .hero-header, #home, .header {
   background: var(--primary) !important;
