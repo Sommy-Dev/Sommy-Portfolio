@@ -265,12 +265,19 @@ a:focus {
 .hero .hero-image {
     position: relative;
     text-align: right;
-    padding-right: 75px;
+    padding-right: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 .hero .hero-image img {
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 96%;
+    max-height: 96%;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: bottom;
+    filter: contrast(1.08) saturate(1.05);
 }
 
 .hero .hero-content {
@@ -391,6 +398,15 @@ a:focus {
     .hero .hero-btn .btn {
         padding: 10px 15px;
         letter-spacing: 1px;
+    }
+    
+    .hero .hero-image {
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .hero .hero-image img {
+        max-width: 75%;
     }
 }
 
