@@ -370,6 +370,12 @@ a:focus {
 }
 
 @media (max-width: 767.98px) {
+    .hero .hero-image {
+        display: none !important;
+    }
+    .hero .row > .col-sm-12:last-child {
+        display: none !important;
+    }
     .hero {
         padding-top: 60px;
         padding-bottom: 60px;
